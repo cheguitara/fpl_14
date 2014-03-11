@@ -158,11 +158,53 @@ def import_player(element):
     scraperwiki.sqlite.save(['id'], player, table_name='player')
     
 
+#def import_season_history(element):
+#    records = []
+#    for season in element['season_history']:
+#        history = dict(
+#            player_id=element['id'],
+#            season=season[0],
+#            minutes_played=season[1],
+#            goals_scored=season[2],
+#            assists=season[3],
+#            clean_sheets=season[4],
+#            goals_conceded=season[5],
+#            own_goals=season[6],
+#            penalties_saved=season[7],
+#            penalties_missed=season[8],
+#            yellow_cards=season[9],
+#            red_cards=season[10],
+#            saves=season[11],
+#            bonus=season[12],
+#            ea_sports_ppi=season[13],
+#            value=fpl_to_decimal(season[14]),
+#            points=season[15])
+#        records.append(history)
+#    scraperwiki.sqlite.save(['player_id', 'season'], records,
+#        table_name='season_history')    
 
+
+#def import_fixtures(element):
+#    own_dt = CLUBS.find_dectech(element['team_id'])
+#    records = []
+#    for event in element['fixtures']['all']:
+#        other_dt = CLUBS.find_dectech(event[2][:-4])
+#        fixture = dict(
+#            player_id=element['id'],
+#            played_on=fpl_to_date(event[0]),
+#            round=int(re.findall('\d{1,2}', event[1])[0]),
+#            opponent=CLUBS.find_code(event[2][:-4]),
+#            venue=event[2][-2:-1],
+#            dt_diff=dectech_score(element['element_type_id'], own_dt, other_dt))
+#        records.append(fixture)
+#    scraperwiki.sqlite.save(['player_id', 'played_on'], records,
+#        table_name='fixtures')
 
 def main():
     for element in elements(1, 663):
         import_player(element)
+        #import_season_history(element)
         import_fixture_history(element)
+        #import_fixtures(element)
 
 main()
