@@ -158,7 +158,7 @@ def import_player(element):
 
 
 def main():
-    for element in elements(1, 660):
+    for element in elements(1, 663):
         import_player(element)
         import_fixture_history(element)
 
