@@ -157,7 +157,7 @@ def import_player(element):
     #scraperwiki.sqlite.save(['id'], player, table_name='player')
     
      # Now single datastore for the team information
-    scraperwiki.sqlite.save(unique_keys=["id"], data=player, table_name = "player")
+    scraperwiki.sqlite.save(unique_keys=["id"], {"id": id, "code":code}, table_name = "player")
     #print "Succesfully scraped the details for manager: ", get_teamname(tree)
 
 
