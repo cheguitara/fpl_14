@@ -154,11 +154,15 @@ def import_player(element):
         club=CLUBS.find_code(element['team_id']),
         position=POSITIONS[element['element_type_id']],
         cost=fpl_to_decimal(element['now_cost']))
-    scraperwiki.sqlite.save(['id'], player, table_name='player')
+    #scraperwiki.sqlite.save(['id'], player, table_name='player')
+    
+     # Now single datastore for the team information
+    scraperwiki.sqlite.save(unique_keys=["id"], data=player, table_name = "player")
+    #print "Succesfully scraped the details for manager: ", get_teamname(tree)
 
 
 def main():
-    for element in elements(2, 663):
+    for element in elements(1, 663):
         import_player(element)
         import_fixture_history(element)
 
