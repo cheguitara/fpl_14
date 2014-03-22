@@ -113,7 +113,8 @@ def import_fixture_history(element):
             continue
         match = match.groups()
         # other_dt = CLUBS.find_dectech(match[0])
-        print event
+        #print event
+        print element['id']
         fixture = dict(
             player_id=element['id'],
             played_on=fpl_to_date(event[0]),
