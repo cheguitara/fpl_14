@@ -138,7 +138,7 @@ def import_fixture_history(element):
            ea_sports_ppi=event[15],
 #make BPS event 16?
            net_transfers=event[17],
-            #value=fpl_to_decimal(event[18]),
+            value=fpl_to_decimal(event[18]),
             points=event[19])
             #)
            #### #dt_diff=dectech_score(element['element_type_id'], own_dt, other_dt))
