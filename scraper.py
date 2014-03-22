@@ -161,7 +161,7 @@ def import_player(element):
    # )
     scraperwiki.sqlite.save(['id'], player, table_name='player')
    # scraperwiki.sqlite.save(['id'], player)
-    
+
 
 #def import_season_history(element):
 #    records = []
