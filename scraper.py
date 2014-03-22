@@ -206,7 +206,6 @@ def import_player(element):
 
 def main():#663
     for element in elements(1, 5):
-        print element
         import_player(element)
         #import_season_history(element)
         import_fixture_history(element)
