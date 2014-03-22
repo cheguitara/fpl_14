@@ -113,7 +113,7 @@ def import_fixture_history(element):
             continue
         match = match.groups()
         # other_dt = CLUBS.find_dectech(match[0])
-#print event
+ print event
         fixture = dict(
             player_id=element['id'],
             #played_on=fpl_to_date(event[0]),
@@ -121,9 +121,9 @@ def import_fixture_history(element):
             round=event[1],
             opponent=CLUBS.find_code(match[0]),
             venue=match[1],
-            #team_goals_scored=match[2],
-            #team_goals_conceded=match[3],
-            #minutes_played=event[3],
+            team_goals_scored=match[2],
+            team_goals_conceded=match[3],
+            minutes_played=event[3],
             #goals_scored=event[4],
             #assists=event[5],
             #clean_sheets=event[6],
