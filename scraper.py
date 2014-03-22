@@ -146,9 +146,9 @@ def import_fixture_history(element):
 
 def import_player(element):
     player = dict(
-        id=element['id']#,
-       # code=element['code'],
-       # forename=element['first_name'],
+        id=element['id'],
+       code=element['code'],
+       forename=element['first_name']#,
       #  surname=element['second_name'],
       #  web_name=element['web_name'],
       # club=CLUBS.find_code(element['team_id']),
