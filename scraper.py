@@ -204,8 +204,8 @@ def import_player(element):
 #    scraperwiki.sqlite.save(['player_id', 'played_on'], records,
 #        table_name='fixtures')
 
-def main():
-    for element in elements(1, 663):
+def main():#663
+    for element in elements(1, 10):
         import_player(element)
         #import_season_history(element)
         import_fixture_history(element)
