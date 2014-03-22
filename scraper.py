@@ -150,9 +150,9 @@ def import_player(element):
        code=element['code'],
        forename=element['first_name'],
       surname=element['second_name'],
-      web_name=element['web_name']#,
-      # club=CLUBS.find_code(element['team_id']),
-      #  position=POSITIONS[element['element_type_id']],
+      web_name=element['web_name'],
+      club=CLUBS.find_code(element['team_id']),
+      position=POSITIONS[element['element_type_id']],
       #  cost=fpl_to_decimal(element['now_cost']))
     )
     scraperwiki.sqlite.save(['id'], player, table_name='player')
