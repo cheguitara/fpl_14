@@ -116,8 +116,8 @@ def import_fixture_history(element):
         print event
         fixture = dict(
             player_id=element['id'],
-            #played_on=fpl_to_date(event[0]),
-            played_on=event[0],
+            played_on=fpl_to_date(event[0]),
+           # played_on=event[0],
             round=event[1],
             opponent=CLUBS.find_code(match[0]),
             venue=match[1],
@@ -139,6 +139,7 @@ def import_fixture_history(element):
 #make BPS event 16?
            net_transfers=event[17],
             #value=fpl_to_decimal(event[18]),
+            value=event[18],
             points=event[19])
             #)
            #### #dt_diff=dectech_score(element['element_type_id'], own_dt, other_dt))
