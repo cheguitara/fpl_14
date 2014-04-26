@@ -56,14 +56,14 @@ class Clubs(object):
      #       self._dectech[club['name']] = club
      #   scraperwiki.sqlite.save(['name'], self._dectech.values(), table_name='club')
         
-    #def find_code(self, name):
-    #    code = self._codes.get(name)
-    #    if code:
-    #        return code
-    #    for club in self.names:
-    #        if name in club:
-    #            self._codes[name] = club[1]
-    #            return club[1]
+    def find_code(self, name):
+        code = self._codes.get(name)
+        if code:
+            return code
+        for club in self.names:
+            if name in club:
+                self._codes[name] = club[1]
+                return club[1]
 
     #def find_dectech(self, name):
     #    return self._dectech[self.find_code(name)]
