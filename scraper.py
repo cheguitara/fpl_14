@@ -37,24 +37,24 @@ class Clubs(object):
         (20, 'WHU', 'West Ham'),
         )
         
-    #def __init__(self):
-    #    self._codes = {}
-    #    
-    #    base_url = 'http://www.dectech.org'
-    #    url = '%s/cgi-bin/new_site/GetTeamRankingsIntl.pl?divID=0' % base_url
-    #    referer = '%s/football_sites/football_dectech/rankings.php' % base_url
-    #    html = requests.get(url, headers=dict(referer=referer)).content
+    def __init__(self):
+        self._codes = {}
+        
+        base_url = 'http://www.dectech.org'
+        url = '%s/cgi-bin/new_site/GetTeamRankingsIntl.pl?divID=0' % base_url
+        referer = '%s/football_sites/football_dectech/rankings.php' % base_url
+        html = requests.get(url, headers=dict(referer=referer)).content
 
-     #   self._dectech = {}
-    #    data = json.loads(html)
-     #   for ranking in data['rankings']:
-    #        club = dict(
-    #            name=self.find_code(ranking['name']),
-     #           defence=percentage(data['bounds']['minDef'], ranking['def']),
-     #           attack=percentage(ranking['atk'], data['bounds']['maxAtk']),
-     #           overall=percentage(ranking['overall'], data['bounds']['maxOvr']))
-     #       self._dectech[club['name']] = club
-     #   scraperwiki.sqlite.save(['name'], self._dectech.values(), table_name='club')
+        self._dectech = {}
+        data = json.loads(html)
+        for ranking in data['rankings']:
+            club = dict(
+                name=self.find_code(ranking['name']),
+                defence=percentage(data['bounds']['minDef'], ranking['def']),
+                attack=percentage(ranking['atk'], data['bounds']['maxAtk']),
+                overall=percentage(ranking['overall'], data['bounds']['maxOvr']))
+            self._dectech[club['name']] = club
+        scraperwiki.sqlite.save(['name'], self._dectech.values(), table_name='club')
         
     def find_code(self, name):
         code = self._codes.get(name)
@@ -65,8 +65,8 @@ class Clubs(object):
                 self._codes[name] = club[1]
                 return club[1]
 
-    #def find_dectech(self, name):
-    #    return self._dectech[self.find_code(name)]
+    def find_dectech(self, name):
+        return self._dectech[self.find_code(name)]
         
 CLUBS = Clubs()
 
