@@ -208,7 +208,7 @@ def import_player(element):
 #        table_name='fixtures')
 
 def main():#663
-    for element in elements(1, 678):
+    for element in elements(1, 683):
         import_player(element)
         #import_season_history(element)
         import_fixture_history(element)
