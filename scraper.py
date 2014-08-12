@@ -22,7 +22,7 @@ class Clubs(object):
         (5, 'CRY', 'Crystal Palace'),
         (6, 'EVE', 'Everton'),
         (7, 'HUL', 'Hull'),
-        (8, 'LEI', 'leicester'),
+        (8, 'LEI', 'Leicester'),
         (9, 'LIV', 'Liverpool'),
         (10, 'MCI', 'Man City'),
         (11, 'MUN', 'Man Utd', 'Man United'),
