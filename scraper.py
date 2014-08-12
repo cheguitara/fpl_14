@@ -157,7 +157,7 @@ def import_player(element):
       surname=element['second_name'],
       web_name=element['web_name'],
       club=CLUBS.find_code(element['team_id']),
-      position=POSITIONS[element['type_name']],
+      position=POSITIONS[element['element_type']],
       #last season was position=POSITIONS[element['element_type_id']],
        #cost=fpl_to_decimal(element['now_cost']))
        cost=element['now_cost'])
