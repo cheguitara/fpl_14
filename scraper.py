@@ -119,7 +119,7 @@ def import_fixture_history(element):
         fixture = dict(
             player_id=element['id'],
             played_on=fpl_to_date(event[0]),
-            print played_on
+            echo played_on
            # played_on=event[0],
             round=event[1],
             opponent=CLUBS.find_code(match[0]),
