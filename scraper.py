@@ -119,6 +119,7 @@ def import_fixture_history(element):
         fixture = dict(
             player_id=element['id'],
             played_on=fpl_to_date(event[0]),
+            print played_on
            # played_on=event[0],
             round=event[1],
             opponent=CLUBS.find_code(match[0]),
@@ -208,8 +209,8 @@ def import_player(element):
 #    scraperwiki.sqlite.save(['player_id', 'played_on'], records,
 #        table_name='fixtures')
 
-def main():#663
-    for element in elements(1, 563):
+def main():#563
+    for element in elements(1, 50):
         import_player(element)
         #import_season_history(element)
         import_fixture_history(element)
