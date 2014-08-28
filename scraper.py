@@ -7,7 +7,7 @@ import re
 import requests
 import scraperwiki
 
-SEASON = (2013, 2014)
+SEASON = (2014, 2015)
 
 def percentage(part, whole):
     return int(float(part) / float(whole) * 100)
@@ -29,8 +29,8 @@ class Clubs(object):
         (12, 'NEW', 'Newcastle'),
         (13, 'QPR', 'QPR'),
         (14, 'SOU', 'Southampton'),
-        (15, 'STK', 'Stoke City', 'Stoke'),
-        (16, 'SUN', 'Sunderland'),
+        (16, 'STK', 'Stoke City', 'Stoke'),
+        (15, 'SUN', 'Sunderland'),
         (17, 'SWA', 'Swansea'),
         (18, 'TOT', 'Tottenham'),
         (19, 'WBA', 'West Brom'),
