@@ -30,9 +30,9 @@ class Clubs(object):
         (13, 'QPR', 'QPR'),
         (14, 'SOU', 'Southampton'),
         (16, 'STK', 'Stoke City', 'Stoke'),
-        (15, 'SUN', 'Sunderland'),
-        (17, 'SWA', 'Swansea'),
-        (18, 'TOT', 'Tottenham'),
+        (17, 'SUN', 'Sunderland'),
+        (18, 'SWA', 'Swansea'),
+        (15, 'TOT', 'Tottenham'),
         (19, 'WBA', 'West Brom'),
         (20, 'WHU', 'West Ham'),
         )
@@ -209,7 +209,7 @@ def import_player(element):
 #        table_name='fixtures')
 
 def main():#563
-    for element in elements(1, 589):
+    for element in elements(1, 591):
         import_player(element)
         #import_season_history(element)
         import_fixture_history(element)
