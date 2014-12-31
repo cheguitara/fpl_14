@@ -64,7 +64,7 @@ class Clubs(object):
             if name in club:
                 self._codes[name] = club[1]
                 return club[1]
-
+q
     def find_dectech(self, name):
         return self._dectech[self.find_code(name)]
         
@@ -209,7 +209,7 @@ def import_player(element):
 #        table_name='fixtures')
 
 def main():#563
-    for element in elements(1, 650):
+    for element in elements(1, 652):
         import_player(element)
         #import_season_history(element)
         import_fixture_history(element)
