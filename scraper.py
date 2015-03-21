@@ -1,4 +1,4 @@
-from datetime import date, datetime
+Mufrom datetime import date, datetime
 from decimal import Decimal
 import itertools
 import json
@@ -209,7 +209,7 @@ def import_player(element):
 #        table_name='fixtures')
 
 def main():#563
-    for element in elements(1, 685):
+    for element in elements(1, 689):
         import_player(element)
         #import_season_history(element)
         import_fixture_history(element)
